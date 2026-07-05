@@ -1,0 +1,14 @@
+matplotlib
+neo4j
+nltk
+numpy
+orjson
+psycopg2-binary
+qdrant-client
+requests
+scikit-learn
+sentence-transformers
+streamlit
+torch
+torch-geometric
+tqdm
