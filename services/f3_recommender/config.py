@@ -1,0 +1,29 @@
+from pathlib import Path
+
+
+BASE_DIR = Path(__file__).resolve().parents[2]
+INPUT_FILE = BASE_DIR / "data/02_processed/papers_100k_complete.jsonl"
+EMBEDDING_CACHE = BASE_DIR / "models/node_embeddings.pt"
+MODEL_SAVE_PATH = BASE_DIR / "models/gcn_model.pth"
+FINAL_VECTORS = BASE_DIR / "models/gcn_final_embeddings.pt"
+METADATA_JSON = BASE_DIR / "data/s2_processed/papers_metadata.json"
+PLOT_IMAGE = BASE_DIR / "models/gcn_training_metrics.png"
+REPORT_JSON = BASE_DIR / "models/gcn_training_report.json"
+
+TRAIN_END_YEAR = 2021
+VALIDATION_END_YEAR = 2022
+RANDOM_SEED = 42
+MAX_TRAIN_EDGES_PER_EPOCH = 200_000
+MAX_RANKING_EVALUATION_EDGES = 10_000
+RANKING_NEGATIVES_PER_POSITIVE = 99
+HARD_NEGATIVE_CANDIDATES = 4
+NEGATIVE_SAMPLING_BATCH_SIZE = 8_192
+NEGATIVE_SAMPLING_MAX_ATTEMPTS = 6
+EARLY_STOPPING_PATIENCE = 30
+MIN_DELTA = 1e-4
+
+HIDDEN_CHANNELS = 128
+OUTPUT_CHANNELS = 64
+LEARNING_RATE = 0.01
+WEIGHT_DECAY = 1e-5
+MAX_EPOCHS = 1_000
